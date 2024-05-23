@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<style type="text/css">
+    
+   *{
+       padding:0;
+       margin:0; 
+       scroll-behavior:smooth;   
+   }
+   
+   body{
+       background-color:black;
+       border:.1px solid #ff9d00ec;
+       color:#ff9d00ec;
+       padding-bottom:15px;
+   }
+   
+   .top{
+       background-color:#ff9d00ec;
+       position:sticky;
+       top:0;
+       z-index:99;
+       height:23px;
+   }
+   
+   .logo{
+       color:#ffffeaec;
+       font-weight:bolder;
+       margin-left:5px;
+       position:relative;
+   } 
+   
+   .logo>span{
+       color:black;
+       font-weight:bolder;
+       font-variant:small-caps;
+   }
+   
+   
+   
+   .hire>button{
+       border-style:none;
+       background-color:#ff9d00ec;
+       border:1px solid #ff9d00ec;
+       color:black;
+       padding:5px;
+       border-radius:50px;
+       box-shadow:0 0 10px #ff9d00ec;
+       margin-top:10px;
+       margin-left:5px;
+       font-size:5px;
+       transition-property: width;
+       transition-duration:5s;
+       height:25px;
+       width:70px;
+       font-weight:bolder;
+       letter-spacing:0.5px;
+   }
+   
+   .hire>button:hover{
+       background-color:black;
+       color:#ffffeaec;
+       box-shadow:0 0 10px #ff9d00ec;
+       width:70px;
+       height:25px;
+   }
+   
+   .about{
+       color:#ff9d00ec;
+       margin-left:4%;
+       margin-top:-10px;
+       margin-bottom:70px;
+       font-family: Courier new, monospace;
+   }
+   
+   .about>span{
+       color:#ffffeaec;;
+       font-size:20px;
+   }
+   
+   .isa{
+       color:#ffffeaec;
+       text-align:center;
+       margin-top:50px;
+       font-family: Courier new, monospace;
+   }
+   
+   .isabutton{
+       border-style:none;
+       background-color:#ff9d00ec;
+       color:black;
+       padding:5px;
+       border-radius:50px;
+       box-shadow:0 0 10px #ff9d00ec;
+       margin-top:10px;
+       margin-left:20px;
+       font-size:5px;
+       transition-property: width;
+       transition-duration:5s;
+       height:25px;
+       width:70px;
+       font-weight:bolder;
+       letter-spacing:0.5px;
+   }
+   
+   .isabutton:hover{
+       background-color:black;
+       color:#ffffeaec;
+       box-shadow:0 0 10px #ff9d00ec;
+       width:70px;
+       height:25px;
+       text-shadow:0 0 5px white;
+   }
+   
+   .devdes{
+       color:#ffffeaec;
+       margin-left:20%;
+       font-weight:bolder;
+   }
+   
+   .paragraph{
+       margin-left:4%;
+       font-family: Courier new, monospace;
+   }
+   
+   #SKILL{
+       color:#ffffeaec;
+       text-align:center;
+       margin-top:70px; 
+   }
+   
+   h1{
+       font-family: Courier new, monospace;
+   }
+   
+   .dalawa{
+       color:#ffffeaec;
+       text-align:center;
+       margin-top:90px;
+   }
+   
+   h4{
+       color:black;
+       text-align:center;
+   }
+   
+   .b11>h4{
+       margin-top:40px;
+   }
+   
+   .b22>h4{
+       margin-top:40px;
+   }
+   
+   .b33>h4{
+       margin-top:40px;
+   }
+   
+   h4:first-letter{
+       color:#ffffeaec;
+   }
+   
+   .square{
+       display:flex;
+       gap:10px;
+       margin-top:15px;
+   }
+   
+   .b11{
+        width:100px;
+        height:100px;
+        border:1px solid #ffffeaec;
+        background-color:#ff9d00ec;
+        color:#ffffeaec;
+        border-radius:25px;
+        box-shadow:0 0 20px #ff9d00ec; 
+        transition:1s;
+   }
+   
+   .b11:hover{
+        transform:translateY(-5px);
+        transition:0.5s;
+   }
+   
+   .b22{
+        width:100px;
+        height:100px;
+        border:1px solid #ffffeaec;
+        background-color:#ff9d00ec;
+        color:#ffffeaec;
+        border-radius:25px;
+        box-shadow:0 0 20px #ff9d00ec;
+        transition:1s;
+   }
+   
+   .b22:hover{
+        transform:translateY(-5px);
+        transition:0.5s;
+   }
+   
+   .b33{
+        width:100px;
+        height:100px;
+        border:1px solid #ffffeaec;
+        background-color:#ff9d00ec;
+        color:#ffffeaec;
+        border-radius:25px;
+        box-shadow:0 0 20px #ff9d00ec;
+        transition:1s;
+   }
+   
+   .b33:hover{
+        transform:translateY(-5px);
+        transition:0.5s;
+   }
+   
+   .b1{
+        width:95%;
+        margin-left:2%;
+        height:100px;
+        border:1px solid #ffffeaec;
+        background-color:#ff9d00ec;
+        color:#ffffeaec;
+        border-radius:25px;
+        box-shadow:0 0 20px #ff9d00ec; 
+        margin-top:15px;
+        transition:1s;
+   }
+   
+    .b1:hover{
+        transform:translateY(-5px);
+        transition:0.5s;
+   }
+   
+   .b2{
+        width:95%;
+        margin-left:2%;
+        height:100px;
+        border:1px solid #ffffeaec;
+        background-color:#ff9d00ec;
+        color:#ffffeaec;
+        border-radius:25px;
+        box-shadow:0 0 20px #ff9d00ec;
+        margin-top:15px;
+        transition:1s;
+   }
+   
+    .b2:hover{
+        transform:translateY(-5px);
+        transition:0.5s;
+   }
+   
+   .b3{
+        width:95%;
+        margin-left:2%;
+        height:100px;
+        border:1px solid #ffffeaec;
+        background-color:#ff9d00ec;
+        color:#ffffeaec;
+        border-radius:25px;
+        box-shadow:0 0 20px #ff9d00ec;
+        margin-top:15px;
+        transition:1s;
+   }
+   
+    .b3:hover{
+        transform:translateY(-5px);
+        transition:0.5s;
+   }
+   
+   .readmore{
+       border-style:none;
+       background-color:black;
+       border:1px solid #ff9d00ec;
+       color:#ff9d00ec;
+       padding:5px;
+       border-radius:50px;
+       box-shadow:0 0 10px #ff9d00ec;
+       margin-top:10px;
+       margin-left:20px;
+       font-size:5px;
+       transition-property: width;
+       transition-duration:5s;
+       height:25px;
+       width:60px;
+       font-weight:bolder;
+       letter-spacing:0.5px;
+   }
+   
+   .readmore:hover{
+       background-color:#ffffeaec;
+       border:1px solid black;
+       box-shadow:0 0 10px black;
+       color:black;
+   }
+   
+   h3{
+       color:#ffffeaec;
+       font-family: Courier new, monospace;
+       font-size:medium;
+       margin-top:90px;
+   }
+   
+   .web{
+       border-style:none;
+       background-color:#ff9d00ec;
+       border:1px solid #ff9d00ec;
+       color:black;
+       padding:5px;
+       border-radius:50px;
+       box-shadow:0 0 10px #ff9d00ec;
+       margin-top:10px;
+       font-size:5px;
+       height:25px;
+       width:70px;
+       text-align:center;
+       margin-left:37%;
+       font-weight:bolder;
+       letter-spacing:0.5px;
+   }
+   
+   .web:hover{
+       background-color:black;
+       color:#ffffeaec;
+       box-shadow:0 0 10px #ff9d00ec;
+       width:70px;
+       height:25px;
+   }
+   
+   form{
+       border:1px solid #ff9d00ec;
+       border-radius:5px;
+       margin-top:50px;
+       padding-bottom:5px;
+       margin-bottom:10px;
+       box-shadow:0 0 10px #ff9d00ec;
+   }
+   
+   .tatlo{
+       color:#ffffeaec;
+       text-align:center;
+   }
+   
+   input{
+       background-color: transparent;
+       border-style:none;
+       border:1px solid #ff9d00ec; 
+       border-radius:5px;
+       padding:5px;
+       margin:5px;
+       margin-left:20%;
+       outline:none;
+       color:#ffffeaec;
+       box-shadow:0 0 10px #ff9d00ec;
+   }
+   
+   textarea{
+       background-color: transparent;
+       border-style:none;
+       border:1px solid #ff9d00ec; 
+       border-radius:5px;
+       padding-bottom:50px;
+       margin-left:15%;
+       margin-top:10px;
+       width:68%;
+       outline:none;
+       color:#ffffeaec;
+       box-shadow:0 0 10px #ff9d00ec;
+   }
+   
+   .sub{
+       border-style:none;
+       background-color:#ff9d00ec;
+       border:1px solid #ff9d00ec;
+       color:black;
+       padding:5px;
+       border-radius:50px;
+       box-shadow:0 0 10px #ff9d00ec;
+       margin-top:10px;
+       font-size:5px;
+       height:25px;
+       width:70px;
+       text-align:center;
+       margin-left:38%;
+       font-weight:bolder;
+       letter-spacing:0.5px;
+   }
+   
+   .sub:hover{
+       background-color:black;
+       color:#ffffeaec;
+       box-shadow:0 0 10px #ff9d00ec;
+       width:70px;
+       height:25px;
+   }
+    
+    
+   .hatchi{
+       text-align:center;
+       margin-top:15px;
+       margin-bottom:15px;
+       color:#ffffeaec;
+       font-family: Courier new, monospace;
+       font-size:small;
+   }
+   
+   img{
+       width:100%;
+       height:30%;
+       border-radius:25px;
+       opacity:1;
+       transition-duration:3s;
+   }
+   
+   img:hover{
+       opacity:0;
+       transition:1s;
+   }
+    
+   section{
+       display:grid;
+       place-items: center;
+       align-items:center;
+   }
+   
+   .hidden{
+       opacity:0;
+       transition:all 2s;
+       transform: rotateY(140deg);
+   }
+   
+   .show{
+       opacity:1;
+       transform:translateX(0%);
+   }
+   
+   .icons2{
+       background-color:#ff9d00ec;
+       padding:5px;
+       margin-bottom:3px;
+       color:white;
+   }
+   
+   .icon{
+       padding:5px;
+   }
+   
+   
+   
+   .pic1>img{
+        width:100px;
+        height:100%;
+        border-radius:5px;
+        transition-duration:1s;
+        border:1px solid purple;
+        box-shadow:0 0 1px purple;
+        filter:blur(2px);
+        margin-top:30px;
+    }
+    
+    .pic1>img:hover{
+        opacity:1;
+        box-shadow:0 0 1px purple;
+        filter:none;
+        transform: translateY(-20px)
+    }
+    
+    .pic2>img{
+        width:100px;
+        height:100%;
+        border-radius:5px;
+        transition-duration:1s;
+        border:1px solid purple;
+        box-shadow:0 0 1px purple;
+        filter:blur(2px);
+        margin-top:30px;
+    }
+    
+    .pic2>img:hover{
+        opacity:1;
+        box-shadow:0 0 1px purple;
+        filter:none;
+        transform: translateY(-20px)
+    }
+    
+    .pic3>img{
+        width:100px;
+        height:100%;
+        border-radius:5px;
+        transition-duration:1s;
+        border:1px solid purple;
+        box-shadow:0 0 1px purple;
+        filter:blur(2px);
+        margin-top:30px;
+    }
+    
+    .pic3>img:hover{
+        opacity:1;
+        box-shadow:0 0 1px purple;
+        filter:none;
+        transform: translateY(-20px)
+    }
+    
+    p{
+        margin-top:-22px;
+        transition-duration:1s;
+    }
+    
+    .rate1{
+        font-size:14px;       
+    }
+    
+    .rate2{
+        font-size:14px;
+    }
+    
+    .rate3{
+        font-size:14px;
+    }
+    
+    .star{
+        display:flex;
+        gap:20px;
+    }
+    
+    .ratings{
+        font-weight:bolder;
+        font-size:20px;
+    }
+            
+    .menu{
+        background-color: transparent;
+        color:black;
+        padding: 5px 10px;
+        border:none;
+        border-radius:5px;
+        margin-left:290px;
+        position:relative;
+        top:-23px;
+        font-weight:bolder;
+        font-size:medium;
+        font-variant:small-caps;
+    }
+    
+    .menu:first-letter{
+        color:white;
+    }
+        
+    a{
+        display:block; 
+        color:white;
+        text-decoration:none;
+        padding:5px 10px;
+        font-size:small;
+        margin-left:270px;
+        text-align:center;
+        position:relative;
+        top:-23px;
+        font-weight:bolder;
+        font-variant:small-caps;
+    }
+    
+    a:hover{
+        background-color:#ff9d00ec;
+        border-radius:50px;
+    }
+        
+    .navbar{
+        display:none;
+        position:fixed;
+    }
+        
+     .top:hover .navbar{
+        display:block;
+    }
+    
+    .foooter{
+        text-align:center;
+        gap:20px;
+    }
+    
+    i{
+        transition-duration:1s;
+    }
+    
+    i:hover{
+        color:#ffa815;
+        border:1 px solid #ff9d00ec;
+        transform: translateY(-5px)
+    }
+
+
+
+</style>
+<body>    
+<div class="top">
+    <div class="logo">H<span>atchi</span>
+    <button class="menu"><b>Menu</b></button>
+</div>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#ABT">About</a>
+        <a href="#SKILL">Skills</a>
+        <a href="#TESTIMONY">Testimony</a>
+        <a href="#SRVC">Service</a>
+        <a href="#CONTACT">Contact</a>
+   </div>
+   </div>
+</div>
+
+<section class="hidden">
+<div class="1stp">
+<img src="/storage/emulated/0/Pictures/facebook/IMG_20240514_051200.jpg">
+</div>
+ <div class="about"><span>Hello (⁠◠⁠‿⁠◕⁠)</span>
+<div class="intro">Welcome to my portfolio<br>I'm Hatchi, a skilled and creative in layout designing.
+    <div class="hire">
+     <button>LET'S START</button>
+    </div>
+</div>
+</div> 
+</section>
+
+<section class="hidden">
+<div id="ABT"></div>
+ <div class="ABOUT"id="ABOUT"><h1 class="isa">About Me</h1>
+ <div class="paragraph">
+     <p2 class="devdes">Developer & Designer</p2>
+     <br>
+     <p2>I am web developer, I can make clean code and pixel perfect design. I also make the website more interactive with web animation and responsive design to make your website accessible to all users at their devices.</p2>
+ </div>
+ <img src="/storage/emulated/0/Pictures/facebook/IMG_20240503_080951.jpg">
+ <button class="isabutton">LET'S TALK</button>
+ </div>
+</section>
+<div id="SKILL"></div>
+<section class="hidden">
+    <div id="SKILL"><h1>My Skills</h1>
+ <div class="container">
+     <div class="square">
+     <div class="b11"><h4>C++</h4>
+         </div>
+     <div class="b22"><h4>HTML</h4>
+         </div>
+     <div class="b33"><h4>JavaScript</h4>
+         </div> 
+     </div>
+    </div>
+    </div>
+</section>
+
+<section class="hidden">
+<div id="SRVC"><h1 class="dalawa">Services</h1>
+ <div class="container">
+     <div class="b1"><h4>Graphic Designer</h4>
+         <p4>Developer & Designer I am web developer, I can make clean code and pixel perfect design.</p4>
+ <button class="readmore">Read More</button>
+         </div>
+         
+     <div class="b2"><h4>Content Manager</h4>
+         <p4>Developer & Designer I am web developer, I can make clean code and pixel perfect design.</p4>
+ <button class="readmore">Read More</button>
+         </div>
+     <div class="b3"><h4>ISO Developer</h4>
+         <p4>Developer & Designer I am web developer, I can make clean code and pixel perfect design.</p4>
+ <button class="readmore">Read More</button>
+         </div>
+     </div>
+ <br>
+ </div> 
+ <br>
+</section>
+
+<section class="hidden"id="TESTIMONY"><h3 class="ratings">Testimonials</h3>
+    <div class="star">
+    <div class="pic1">
+        <img src="/storage/emulated/0/Pictures/facebook/1707127074378.jpg">
+        <p class="rate1">⭐ ⭐ ⭐ ⭐ ⭐</p>
+        </div>
+    <div class="pic2">
+        <img src="/storage/emulated/0/Pictures/facebook/1707126945287.jpg">
+        <p class="rate2">⭐ ⭐ ⭐ ⭐ ⭐</p>
+    </div>
+    <div class="pic3">
+        <img src="/storage/emulated/0/Pictures/facebook/1707127137079.jpg">
+        <p class="rate3">⭐ ⭐ ⭐ ⭐ ⭐</p>
+    </div> 
+</div>
+</section>
+
+<section class="hidden">
+<div class="CONTACT"id="CONTACT">
+     <div class="last">
+   <h3>Let me get you a beautiful Website</h3>
+     <button class="web">HIRE ME</button>   
+
+<form>
+     <h1 class="tatlo"id="tatlo">Log In</h1>
+        <input type ="email"class="uname"placeholder="Email or Phone Number"required/>
+        <br>
+        
+        <input type ="password"class="upass"placeholder ="Password"required/>
+        <br> 
+    <textarea placeholder="(Optional Message)"></textarea>
+    <br>
+   <input type ="Submit"class ="sub">
+    </form>
+</div>  
+</section>
+
+<section ="hidden">
+<div class="hatchi">
+ <p class="hatchii">For more creative and responsive Website, <br> please click the link below.</p>
+</div>
+</section>
+
+<section class="hidden">
+ <div class="foooter">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-github"></i>
+    <i class="fa-brands fa-tiktok"></i>
+ </div>
+</section>
+
+</body>
+<script type="text/javascript">
+const observer= new IntersectionObserver((entries)=>{
+entries.forEach((entry) => {
+console.log(entry)
+if (entry.isIntersecting){
+entry.target.classList.add('show');
+}else{
+entry.target.classList.remove('show');
+}
+});
+});
+
+const hideElem=document.querySelectorAll('.hidden');
+hideElem.forEach((el) => observer.observe(el));
+</script>
+</html>
